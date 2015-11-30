@@ -45,17 +45,17 @@ if __name__ == '__main__':
 
 
     if units_ms == True:
-        speed_kmh   = speed * (3600/1000)
-        speed_minkm = 1/speed * (1000/60)
+        speed_kmh   = speed * (3600.0/1000)
+        speed_minkm = 1/speed * (1000.0/60)
         speed_ms   = speed
 
     elif units_kmh == True:
-        speed_ms    = (speed * 1000 * (1/3600))
+        speed_ms    = (speed * (1000.0/3600.0))
         speed_minkm = (60/speed)
         speed_kmh   = speed
 
     elif units_minkm == True:
-        speed_ms   = 1/speed * (1/60)
+        speed_ms   = 60/speed
         speed_kmh  = 60/speed
         speed_minkm   = speed
 
